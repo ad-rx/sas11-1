@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Latihan S-SAS Matematika Kelas 11</title>
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  },
+  chtml: {
+    scale: 1.05
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f0f2f5; padding: 20px; max-width: 860px; margin: 0 auto; }
+
+  /* Header logo pengganti dekorasi judul */
+  .page-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .header-logo {
+    width: 62px;
+    height: 62px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 16px;
+  }
+
+  h1 { text-align: center; color: #2c3e50; margin-bottom: 8px; font-size: 1.6em; }
+  .subtitle { text-align: center; color: #7f8c8d; margin-bottom: 30px; font-size: 0.95em; }
+  .section-title { font-size: 1.1em; color: #fff; padding: 10px 18px; border-radius: 8px; margin: 28px 0 16px; font-weight: 600; }
+  .section-title.pg { background: #2980b9; }
+  .section-title.pgk { background: #8e44ad; }
+  .card { background: #fff; border-radius: 12px; padding: 22px; margin-bottom: 18px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); }
+  .q-number { font-weight: 700; color: #2c3e50; margin-bottom: 6px; font-size: 1.05em; }
+  .q-text { margin-bottom: 14px; line-height: 1.7; font-size: 1em; }
+  .options label { display: block; padding: 9px 14px; margin: 6px 0; border-radius: 6px; cursor: pointer; transition: background 0.2s; line-height: 1.5; }
+  .options label:hover { background: #eaf2fb; }
+  .options input { margin-right: 10px; }
+  .btn-pembahasan { margin-top: 14px; padding: 8px 20px; background: #27ae60; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-size: 0.95em; font-weight: 600; transition: background 0.2s; }
+  .btn-pembahasan:hover { background: #219a52; }
+  .btn-pembahasan.active { background: #e74c3c; }
+  .btn-pembahasan.active:hover { background: #c0392b; }
+  .pembahasan { display: none; margin-top: 14px; padding: 16px; background: #f4fdf6; border-left: 4px solid #27ae60; border-radius: 0 8px 8px 0; line-height: 1.8; }
+  .pembahasan.show { display: block; }
+  .pembahasan .step { margin: 6px 0; }
+  .jawaban { display: inline-block; margin-top: 10px; padding: 4px 12px; background: #27ae60; color: #fff; border-radius: 4px; font-weight: 700; }
+  .score-bar { position: sticky; top: 0; z-index: 100; background: #fff; padding: 12px 20px; border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.1); margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+  .score-bar span { font-weight: 600; color: #2c3e50; }
+  .btn-check { padding: 8px 20px; background: #3498db; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; transition: background 0.2s; }
+  .btn-check:hover { background: #2980b9; }
+  .btn-reset { padding: 8px 14px; background: #95a5a6; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; margin-left: 8px; }
+  .btn-reset:hover { background: #7f8c8d; }
+  .correct { background: #d4edda !important; border-left: 3px solid #27ae60; }
+  .incorrect { background: #f8d7da !important; border-left: 3px solid #e74c3c; }
+
+  /* Badge pilihan ganda kompleks */
+  .badge-multi {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 2px 10px;
+    background: #8e44ad;
+    color: #fff;
+    font-size: 0.72em;
+    font-weight: 700;
+    border-radius: 20px;
+    letter-spacing: .3px;
+    vertical-align: middle;
+  }
+
+  /* Copyright */
+  .copyright {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: #7f8c8d;
+    letter-spacing: .2px;
+    margin-top: 30px;
+    padding-top: 18px;
+    border-top: 1px dashed #d0d7de;
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================ HEADER DENGAN LOGO ============================ -->
+<div class="page-header">
+  <img class="header-logo"
+       src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiDXJeJJ9DWykQVF58kDp_k3wEhCESgfgjq9XyRyik147AC3z2mTULQkwi0aVbl_N8fhzgzqo2TC5qkg2TGYwuL0UuGf9V0d06WE2vcwkYBoVR1kx-b9g5RGYq4BTuAbtKG3ZyL13chTY_lYQWGXHrtq8eVraaj38e9kICAXBqb9Jo88c3y6hyphenhyphen0NYxcNQ4/s1600/Dinamis.png"
+       alt="Logo TKA">
+  <h1>Latihan S-SAS Matematika Kelas 11</h1>
+  <p class="subtitle">35 Soal Interaktif — Pilihan Ganda Biasa &amp; Pilihan Ganda Kompleks</p>
+</div>
+
+<div class="score-bar">
+  <span id="score-display">Skor: 0 / 35</span>
+  <div>
+    <button class="btn-check" onclick="checkAll()">Periksa Jawaban</button>
+    <button class="btn-reset" onclick="resetAll()">Reset</button>
+  </div>
+</div>
+
+<!-- ==================== BAGIAN 1 : PILIHAN GANDA BIASA ==================== -->
+<div class="section-title pg">📘 Bagian 1 — Pilihan Ganda Biasa (Soal 1–30)</div>
+
+<!-- Soal 1 -->
+<div class="card" id="card1">
+  <div class="q-number">Soal 1</div>
+  <div class="q-text">Diketahui $f(x) = 2x + 3$ dan $g(x) = x - 1$. Tentukan $(f \circ g)(x)$.</div>
+  <div class="options">
+    <label><input type="radio" name="q1" value="A"> A. $2x + 2$</label>
+    <label><input type="radio" name="q1" value="B"> B. $2x + 1$</label>
+    <label><input type="radio" name="q1" value="C"> C. $2x + 3$</label>
+    <label><input type="radio" name="q1" value="D"> D. $2x - 1$</label>
+    <label><input type="radio" name="q1" value="E"> E. $2x - 2$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p1', this)">Pembahasan</button>
+  <div class="pembahasan" id="p1">
+    <div class="step">$(f \circ g)(x) = f(g(x)) = f(x - 1)$</div>
+    <div class="step">$= 2(x - 1) + 3 = 2x - 2 + 3 = 2x + 1$</div>
+    <span class="jawaban">Jawaban: B</span>
+  </div>
+</div>
+
+<!-- Soal 2 -->
+<div class="card" id="card2">
+  <div class="q-number">Soal 2</div>
+  <div class="q-text">Diketahui $f(x) = x + 4$ dan $g(x) = x^2$. Tentukan $(g \circ f)(x)$.</div>
+  <div class="options">
+    <label><input type="radio" name="q2" value="A"> A. $x^2 + 4$</label>
+    <label><input type="radio" name="q2" value="B"> B. $x^2 + 4x + 16$</label>
+    <label><input type="radio" name="q2" value="C"> C. $x^2 + 8x + 16$</label>
+    <label><input type="radio" name="q2" value="D"> D. $x^2 + 16$</label>
+    <label><input type="radio" name="q2" value="E"> E. $x^2 + 4x$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p2', this)">Pembahasan</button>
+  <div class="pembahasan" id="p2">
+    <div class="step">$(g \circ f)(x) = g(f(x)) = g(x + 4)$</div>
+    <div class="step">$= (x + 4)^2 = x^2 + 8x + 16$</div>
+    <span class="jawaban">Jawaban: C</span>
+  </div>
+</div>
+
+<!-- Soal 3 -->
+<div class="card" id="card3">
+  <div class="q-number">Soal 3</div>
+  <div class="q-text">Diketahui $f(x) = 3x - 6$. Tentukan $f^{-1}(x)$.</div>
+  <div class="options">
+    <label><input type="radio" name="q3" value="A"> A. $\dfrac{x-6}{3}$</label>
+    <label><input type="radio" name="q3" value="B"> B. $3x + 6$</label>
+    <label><input type="radio" name="q3" value="C"> C. $\dfrac{x}{3} + 6$</label>
+    <label><input type="radio" name="q3" value="D"> D. $\dfrac{x+6}{3}$</label>
+    <label><input type="radio" name="q3" value="E"> E. $\dfrac{x}{3} - 6$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p3', this)">Pembahasan</button>
+  <div class="pembahasan" id="p3">
+    <div class="step">Misalkan $y = 3x - 6$, maka $3x = y + 6$.</div>
+    <div class="step">$x = \dfrac{y + 6}{3}$, sehingga $f^{-1}(x) = \dfrac{x + 6}{3}$.</div>
+    <span class="jawaban">Jawaban: D</span>
+  </div>
+</div>
+
+<!-- Soal 4 -->
+<div class="card" id="card4">
+  <div class="q-number">Soal 4</div>
+  <div class="q-text">Diketahui $f(x) = 2x + 1$ dan $g(x) = x^2$. Tentukan $(f \circ g)(3)$.</div>
+  <div class="options">
+    <label><input type="radio" name="q4" value="A"> A. $17$</label>
+    <label><input type="radio" name="q4" value="B"> B. $15$</label>
+    <label><input type="radio" name="q4" value="C"> C. $21$</label>
+    <label><input type="radio" name="q4" value="D"> D. $19$</label>
+    <label><input type="radio" name="q4" value="E"> E. $23$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p4', this)">Pembahasan</button>
+  <div class="pembahasan" id="p4">
+    <div class="step">$(f \circ g)(3) = f(g(3)) = f(3^2) = f(9)$</div>
+    <div class="step">$= 2(9) + 1 = 18 + 1 = 19$</div>
+    <span class="jawaban">Jawaban: D</span>
+  </div>
+</div>
+
+<!-- Soal 5 -->
+<div class="card" id="card5">
+  <div class="q-number">Soal 5</div>
+  <div class="q-text">Diketahui $f(x) = x + 5$. Tentukan $f^{-1}(8)$.</div>
+  <div class="options">
+    <label><input type="radio" name="q5" value="A"> A. $13$</label>
+    <label><input type="radio" name="q5" value="B"> B. $-3$</label>
+    <label><input type="radio" name="q5" value="C"> C. $5$</label>
+    <label><input type="radio" name="q5" value="D"> D. $8$</label>
+    <label><input type="radio" name="q5" value="E"> E. $3$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p5', this)">Pembahasan</button>
+  <div class="pembahasan" id="p5">
+    <div class="step">$f^{-1}(8)$ berarti mencari $x$ sehingga $f(x) = 8$.</div>
+    <div class="step">$x + 5 = 8 \Rightarrow x = 3$</div>
+    <span class="jawaban">Jawaban: E</span>
+  </div>
+</div>
+
+<!-- Soal 6 -->
+<div class="card" id="card6">
+  <div class="q-number">Soal 6</div>
+  <div class="q-text">Diketahui $f(x) = 5x - 2$. Tentukan $f^{-1}(3)$.</div>
+  <div class="options">
+    <label><input type="radio" name="q6" value="A"> A. $2$</label>
+    <label><input type="radio" name="q6" value="B"> B. $1$</label>
+    <label><input type="radio" name="q6" value="C"> C. $3$</label>
+    <label><input type="radio" name="q6" value="D"> D. $13$</label>
+    <label><input type="radio" name="q6" value="E"> E. $5$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p6', this)">Pembahasan</button>
+  <div class="pembahasan" id="p6">
+    <div class="step">$f^{-1}(3)$ berarti $5x - 2 = 3$.</div>
+    <div class="step">$5x = 5 \Rightarrow x = 1$</div>
+    <span class="jawaban">Jawaban: B</span>
+  </div>
+</div>
+
+<!-- Soal 7 -->
+<div class="card" id="card7">
+  <div class="q-number">Soal 7</div>
+  <div class="q-text">Diketahui $f(x) = 2x + 3$ dan $(f \circ g)(x) = 4x + 5$. Tentukan $g(x)$.</div>
+  <div class="options">
+    <label><input type="radio" name="q7" value="A"> A. $2x - 1$</label>
+    <label><input type="radio" name="q7" value="B"> B. $4x + 2$</label>
+    <label><input type="radio" name="q7" value="C"> C. $x + 1$</label>
+    <label><input type="radio" name="q7" value="D"> D. $2x + 5$</label>
+    <label><input type="radio" name="q7" value="E"> E. $2x + 1$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p7', this)">Pembahasan</button>
+  <div class="pembahasan" id="p7">
+    <div class="step">$(f \circ g)(x) = f(g(x)) = 2g(x) + 3 = 4x + 5$</div>
+    <div class="step">$2g(x) = 4x + 2 \Rightarrow g(x) = 2x + 1$</div>
+    <span class="jawaban">Jawaban: E</span>
+  </div>
+</div>
+
+<!-- Soal 8 -->
+<div class="card" id="card8">
+  <div class="q-number">Soal 8</div>
+  <div class="q-text">Lingkaran berjari-jari $7$ cm. Panjang busur dengan sudut pusat $90^\circ$ adalah … ($\pi = \frac{22}{7}$)</div>
+  <div class="options">
+    <label><input type="radio" name="q8" value="A"> A. $22$ cm</label>
+    <label><input type="radio" name="q8" value="B"> B. $7$ cm</label>
+    <label><input type="radio" name="q8" value="C"> C. $11$ cm</label>
+    <label><input type="radio" name="q8" value="D"> D. $14$ cm</label>
+    <label><input type="radio" name="q8" value="E"> E. $44$ cm</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p8', this)">Pembahasan</button>
+  <div class="pembahasan" id="p8">
+    <div class="step">Panjang busur $= \dfrac{\theta}{360^\circ} \times 2\pi r$</div>
+    <div class="step">$= \dfrac{90}{360} \times 2 \times \dfrac{22}{7} \times 7 = \dfrac{1}{4} \times 44 = 11$ cm</div>
+    <span class="jawaban">Jawaban: C</span>
+  </div>
+</div>
+
+<!-- Soal 9 -->
+<div class="card" id="card9">
+  <div class="q-number">Soal 9</div>
+  <div class="q-text">Lingkaran berjari-jari $10$ cm. Panjang busur dengan sudut pusat $60^\circ$ adalah … ($\pi = 3{,}14$)</div>
+  <div class="options">
+    <label><input type="radio" name="q9" value="A"> A. $5{,}23$ cm</label>
+    <label><input type="radio" name="q9" value="B"> B. $10{,}47$ cm</label>
+    <label><input type="radio" name="q9" value="C"> C. $20{,}93$ cm</label>
+    <label><input type="radio" name="q9" value="D"> D. $31{,}40$ cm</label>
+    <label><input type="radio" name="q9" value="E"> E. $62{,}80$ cm</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p9', this)">Pembahasan</button>
+  <div class="pembahasan" id="p9">
+    <div class="step">Panjang busur $= \dfrac{60}{360} \times 2 \times 3{,}14 \times 10$</div>
+    <div class="step">$= \dfrac{1}{6} \times 62{,}8 \approx 10{,}47$ cm</div>
+    <span class="jawaban">Jawaban: B</span>
+  </div>
+</div>
+
+<!-- Soal 10 -->
+<div class="card" id="card10">
+  <div class="q-number">Soal 10</div>
+  <div class="q-text">Ukuran sudut pusat yang menghadap tali busur berukuran $14$ cm (jika $r = 14$ cm) adalah …</div>
+  <div class="options">
+    <label><input type="radio" name="q10" value="A"> A. $30^\circ$</label>
+    <label><input type="radio" name="q10" value="B"> B. $90^\circ$</label>
+    <label><input type="radio" name="q10" value="C"> C. $45^\circ$</label>
+    <label><input type="radio" name="q10" value="D"> D. $60^\circ$</label>
+    <label><input type="radio" name="q10" value="E"> E. $120^\circ$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p10', this)">Pembahasan</button>
+  <div class="pembahasan" id="p10">
+    <div class="step">Panjang tali busur $= 2r \sin\left(\dfrac{\theta}{2}\right)$</div>
+    <div class="step">$14 = 2 \cdot 14 \cdot \sin\left(\dfrac{\theta}{2}\right) \Rightarrow \sin\left(\dfrac{\theta}{2}\right) = \dfrac{1}{2}$</div>
+    <div class="step">$\dfrac{\theta}{2} = 30^\circ \Rightarrow \theta = 60^\circ$</div>
+    <span class="jawaban">Jawaban: D</span>
+  </div>
+</div>
+
+<!-- Soal 11 -->
+<div class="card" id="card11">
+  <div class="q-number">Soal 11</div>
+  <div class="q-text">Dua lingkaran berjari-jari $5$ cm dan $3$ cm. Jarak pusat $= 10$ cm. Panjang garis singgung persekutuan luar adalah …</div>
+  <div class="options">
+    <label><input type="radio" name="q11" value="A"> A. $2\sqrt{6}$ cm</label>
+    <label><input type="radio" name="q11" value="B"> B. $4\sqrt{5}$ cm</label>
+    <label><input type="radio" name="q11" value="C"> C. $6\sqrt{2}$ cm</label>
+    <label><input type="radio" name="q11" value="D"> D. $8$ cm</label>
+    <label><input type="radio" name="q11" value="E"> E. $4\sqrt{6}$ cm</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p11', this)">Pembahasan</button>
+  <div class="pembahasan" id="p11">
+    <div class="step">Garis singgung persekutuan luar: $d^2 - (R - r)^2$</div>
+    <div class="step">$= 10^2 - (5 - 3)^2 = 100 - 4 = 96$</div>
+    <div class="step">Panjang $= \sqrt{96} = 4\sqrt{6}$ cm</div>
+    <span class="jawaban">Jawaban: E</span>
+  </div>
+</div>
+
+<!-- Soal 12 -->
+<div class="card" id="card12">
+  <div class="q-number">Soal 12</div>
+  <div class="q-text">Lingkaran berjari-jari $5$ cm. Titik berjarak $13$ cm dari pusat. Panjang garis singgung dari titik tersebut adalah …</div>
+  <div class="options">
+    <label><input type="radio" name="q12" value="A"> A. $8$ cm</label>
+    <label><input type="radio" name="q12" value="B"> B. $10$ cm</label>
+    <label><input type="radio" name="q12" value="C"> C. $12$ cm</label>
+    <label><input type="radio" name="q12" value="D"> D. $13$ cm</label>
+    <label><input type="radio" name="q12" value="E"> E. $18$ cm</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p12', this)">Pembahasan</button>
+  <div class="pembahasan" id="p12">
+    <div class="step">Panjang garis singgung $= \sqrt{d^2 - r^2}$</div>
+    <div class="step">$= \sqrt{13^2 - 5^2} = \sqrt{169 - 25} = \sqrt{144} = 12$ cm</div>
+    <span class="jawaban">Jawaban: C</span>
+  </div>
+</div>
+
+<!-- Soal 13 -->
+<div class="card" id="card13">
+  <div class="q-number">Soal 13</div>
+  <div class="q-text">Sudut keliling yang menghadap diameter lingkaran besarnya adalah …</div>
+  <div class="options">
+    <label><input type="radio" name="q13" value="A"> A. $45^\circ$</label>
+    <label><input type="radio" name="q13" value="B"> B. $60^\circ$</label>
+    <label><input type="radio" name="q13" value="C"> C. $90^\circ$</label>
+    <label><input type="radio" name="q13" value="D"> D. $180^\circ$</label>
+    <label><input type="radio" name="q13" value="E"> E. $30^\circ$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p13', this)">Pembahasan</button>
+  <div class="pembahasan" id="p13">
+    <div class="step">Sudut keliling yang menghadap diameter selalu $90^\circ$ (sudut siku-siku).</div>
+    <span class="jawaban">Jawaban: C</span>
+  </div>
+</div>
+
+<!-- Soal 14 -->
+<div class="card" id="card14">
+  <div class="q-number">Soal 14</div>
+  <div class="q-text">Lingkaran berjari-jari $21$ cm. Panjang busur dengan sudut pusat $60^\circ$ adalah … ($\pi = \frac{22}{7}$)</div>
+  <div class="options">
+    <label><input type="radio" name="q14" value="A"> A. $11$ cm</label>
+    <label><input type="radio" name="q14" value="B"> B. $33$ cm</label>
+    <label><input type="radio" name="q14" value="C"> C. $22$ cm</label>
+    <label><input type="radio" name="q14" value="D"> D. $44$ cm</label>
+    <label><input type="radio" name="q14" value="E"> E. $66$ cm</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p14', this)">Pembahasan</button>
+  <div class="pembahasan" id="p14">
+    <div class="step">Panjang busur $= \dfrac{60}{360} \times 2 \times \dfrac{22}{7} \times 21$</div>
+    <div class="step">$= \dfrac{1}{6} \times 132 = 22$ cm</div>
+    <span class="jawaban">Jawaban: C</span>
+  </div>
+</div>
+
+<!-- Soal 15 -->
+<div class="card" id="card15">
+  <div class="q-number">Soal 15</div>
+  <div class="q-text">Dua tali busur berpotongan di dalam lingkaran. Segmen tali busur 1 berukuran $4$ cm dan $9$ cm. Salah satu segmen tali busur 2 berukuran $6$ cm. Segmen lainnya berukuran …</div>
+  <div class="options">
+    <label><input type="radio" name="q15" value="A"> A. $4$ cm</label>
+    <label><input type="radio" name="q15" value="B"> B. $9$ cm</label>
+    <label><input type="radio" name="q15" value="C"> C. $3$ cm</label>
+    <label><input type="radio" name="q15" value="D"> D. $6$ cm</label>
+    <label><input type="radio" name="q15" value="E"> E. $12$ cm</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p15', this)">Pembahasan</button>
+  <div class="pembahasan" id="p15">
+    <div class="step">Teorema tali busur berpotongan: $4 \times 9 = 6 \times x$</div>
+    <div class="step">$36 = 6x \Rightarrow x = 6$ cm</div>
+    <span class="jawaban">Jawaban: D</span>
+  </div>
+</div>
+
+<!-- Soal 16 -->
+<div class="card" id="card16">
+  <div class="q-number">Soal 16</div>
+  <div class="q-text">Diagram pencar digunakan untuk menunjukkan hubungan antara …</div>
+  <div class="options">
+    <label><input type="radio" name="q16" value="A"> A. satu variabel</label>
+    <label><input type="radio" name="q16" value="B"> B. dua variabel kuantitatif</label>
+    <label><input type="radio" name="q16" value="C"> C. tiga variabel</label>
+    <label><input type="radio" name="q16" value="D"> D. variabel kategorik</label>
+    <label><input type="radio" name="q16" value="E"> E. variabel ordinal</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p16', this)">Pembahasan</button>
+  <div class="pembahasan" id="p16">
+    <div class="step">Diagram pencar (scatter plot) menunjukkan hubungan antara dua variabel kuantitatif.</div>
+    <span class="jawaban">Jawaban: B</span>
+  </div>
+</div>
+
+<!-- Soal 17 -->
+<div class="card" id="card17">
+  <div class="q-number">Soal 17</div>
+  <div class="q-text">Pola titik pada diagram pencar yang naik dari kiri bawah ke kanan atas menunjukkan korelasi …</div>
+  <div class="options">
+    <label><input type="radio" name="q17" value="A"> A. negatif</label>
+    <label><input type="radio" name="q17" value="B"> B. positif</label>
+    <label><input type="radio" name="q17" value="C"> C. tidak ada</label>
+    <label><input type="radio" name="q17" value="D"> D. kuat negatif</label>
+    <label><input type="radio" name="q17" value="E"> E. lemah negatif</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p17', this)">Pembahasan</button>
+  <div class="pembahasan" id="p17">
+    <div class="step">Pola naik dari kiri bawah ke kanan atas menunjukkan korelasi positif.</div>
+    <span class="jawaban">Jawaban: B</span>
+  </div>
+</div>
+
+<!-- Soal 18 -->
+<div class="card" id="card18">
+  <div class="q-number">Soal 18</div>
+  <div class="q-text">Titik-titik pada diagram pencar yang tersebar acak tanpa pola menunjukkan …</div>
+  <div class="options">
+    <label><input type="radio" name="q18" value="A"> A. korelasi positif</label>
+    <label><input type="radio" name="q18" value="B"> B. korelasi negatif</label>
+    <label><input type="radio" name="q18" value="C"> C. tidak ada korelasi</label>
+    <label><input type="radio" name="q18" value="D"> D. korelasi sempurna</label>
+    <label><input type="radio" name="q18" value="E"> E. korelasi kuat</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p18', this)">Pembahasan</button>
+  <div class="pembahasan" id="p18">
+    <div class="step">Titik-titik yang tersebar acak tanpa pola menunjukkan tidak ada korelasi.</div>
+    <span class="jawaban">Jawaban: C</span>
+  </div>
+</div>
+
+<!-- Soal 19 -->
+<div class="card" id="card19">
+  <div class="q-number">Soal 19</div>
+  <div class="q-text">Pada diagram pencar, sumbu horizontal ($x$) biasanya menunjukkan …</div>
+  <div class="options">
+    <label><input type="radio" name="q19" value="A"> A. variabel dependen</label>
+    <label><input type="radio" name="q19" value="B"> B. frekuensi</label>
+    <label><input type="radio" name="q19" value="C"> C. variabel independen</label>
+    <label><input type="radio" name="q19" value="D"> D. jumlah data</label>
+    <label><input type="radio" name="q19" value="E"> E. rata-rata</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p19', this)">Pembahasan</button>
+  <div class="pembahasan" id="p19">
+    <div class="step">Sumbu horizontal ($x$) biasanya menunjukkan variabel independen (bebas).</div>
+    <span class="jawaban">Jawaban: C</span>
+  </div>
+</div>
+
+<!-- Soal 20 -->
+<div class="card" id="card20">
+  <div class="q-number">Soal 20</div>
+  <div class="q-text">Korelasi negatif pada diagram pencar ditunjukkan oleh pola titik yang …</div>
+  <div class="options">
+    <label><input type="radio" name="q20" value="A"> A. menaik dari kiri bawah ke kanan atas</label>
+    <label><input type="radio" name="q20" value="B"> B. tersebar acak</label>
+    <label><input type="radio" name="q20" value="C"> C. membentuk lingkaran</label>
+    <label><input type="radio" name="q20" value="D"> D. menurun dari kiri atas ke kanan bawah</label>
+    <label><input type="radio" name="q20" value="E"> E. horizontal</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p20', this)">Pembahasan</button>
+  <div class="pembahasan" id="p20">
+    <div class="step">Korelasi negatif ditunjukkan oleh pola menurun dari kiri atas ke kanan bawah.</div>
+    <span class="jawaban">Jawaban: D</span>
+  </div>
+</div>
+
+<!-- Soal 21 -->
+<div class="card" id="card21">
+  <div class="q-number">Soal 21</div>
+  <div class="q-text">Nilai koefisien korelasi yang menunjukkan hubungan sempurna positif adalah …</div>
+  <div class="options">
+    <label><input type="radio" name="q21" value="A"> A. $0$</label>
+    <label><input type="radio" name="q21" value="B"> B. $1$</label>
+    <label><input type="radio" name="q21" value="C"> C. $-1$</label>
+    <label><input type="radio" name="q21" value="D"> D. $0{,}5$</label>
+    <label><input type="radio" name="q21" value="E"> E. $\infty$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p21', this)">Pembahasan</button>
+  <div class="pembahasan" id="p21">
+    <div class="step">Koefisien korelasi sempurna positif bernilai $+1$.</div>
+    <span class="jawaban">Jawaban: B</span>
+  </div>
+</div>
+
+<!-- Soal 22 -->
+<div class="card" id="card22">
+  <div class="q-number">Soal 22</div>
+  <div class="q-text">Nilai koefisien korelasi yang menunjukkan hubungan sempurna negatif adalah …</div>
+  <div class="options">
+    <label><input type="radio" name="q22" value="A"> A. $1$</label>
+    <label><input type="radio" name="q22" value="B"> B. $0$</label>
+    <label><input type="radio" name="q22" value="C"> C. $-1$</label>
+    <label><input type="radio" name="q22" value="D"> D. $-2$</label>
+    <label><input type="radio" name="q22" value="E"> E. $-0{,}5$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p22', this)">Pembahasan</button>
+  <div class="pembahasan" id="p22">
+    <div class="step">Koefisien korelasi sempurna negatif bernilai $-1$.</div>
+    <span class="jawaban">Jawaban: C</span>
+  </div>
+</div>
+
+<!-- Soal 23 -->
+<div class="card" id="card23">
+  <div class="q-number">Soal 23</div>
+  <div class="q-text">Diagram pencar menunjukkan hubungan linear $\hat{y} = 2x + 5$. Jika $x = 10$, maka $\hat{y} = \ldots$</div>
+  <div class="options">
+    <label><input type="radio" name="q23" value="A"> A. $15$</label>
+    <label><input type="radio" name="q23" value="B"> B. $20$</label>
+    <label><input type="radio" name="q23" value="C"> C. $30$</label>
+    <label><input type="radio" name="q23" value="D"> D. $35$</label>
+    <label><input type="radio" name="q23" value="E"> E. $25$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p23', this)">Pembahasan</button>
+  <div class="pembahasan" id="p23">
+    <div class="step">$\hat{y} = 2(10) + 5 = 20 + 5 = 25$</div>
+    <span class="jawaban">Jawaban: E</span>
+  </div>
+</div>
+
+<!-- Soal 24 -->
+<div class="card" id="card24">
+  <div class="q-number">Soal 24</div>
+  <div class="q-text">Himpunan penyelesaian dari $2x + 3 = 11$ adalah …</div>
+  <div class="options">
+    <label><input type="radio" name="q24" value="A"> A. $\{5\}$</label>
+    <label><input type="radio" name="q24" value="B"> B. $\{6\}$</label>
+    <label><input type="radio" name="q24" value="C"> C. $\{4\}$</label>
+    <label><input type="radio" name="q24" value="D"> D. $\{7\}$</label>
+    <label><input type="radio" name="q24" value="E"> E. $\{8\}$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p24', this)">Pembahasan</button>
+  <div class="pembahasan" id="p24">
+    <div class="step">$2x + 3 = 11 \Rightarrow 2x = 8 \Rightarrow x = 4$</div>
+    <span class="jawaban">Jawaban: C</span>
+  </div>
+</div>
+
+<!-- Soal 25 -->
+<div class="card" id="card25">
+  <div class="q-number">Soal 25</div>
+  <div class="q-text">Himpunan penyelesaian dari $3x - 5 < 7$ adalah …</div>
+  <div class="options">
+    <label><input type="radio" name="q25" value="A"> A. $x > 4$</label>
+    <label><input type="radio" name="q25" value="B"> B. $x < 2$</label>
+    <label><input type="radio" name="q25" value="C"> C. $x < 4$</label>
+    <label><input type="radio" name="q25" value="D"> D. $x > 2$</label>
+    <label><input type="radio" name="q25" value="E"> E. $x < 12$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p25', this)">Pembahasan</button>
+  <div class="pembahasan" id="p25">
+    <div class="step">$3x - 5 < 7 \Rightarrow 3x < 12 \Rightarrow x < 4$</div>
+    <span class="jawaban">Jawaban: C</span>
+  </div>
+</div>
+
+<!-- Soal 26 -->
+<div class="card" id="card26">
+  <div class="q-number">Soal 26</div>
+  <div class="q-text">Nilai $x$ yang memenuhi $5x - 2 = 3x + 6$ adalah …</div>
+  <div class="options">
+    <label><input type="radio" name="q26" value="A"> A. $2$</label>
+    <label><input type="radio" name="q26" value="B"> B. $3$</label>
+    <label><input type="radio" name="q26" value="C"> C. $5$</label>
+    <label><input type="radio" name="q26" value="D"> D. $4$</label>
+    <label><input type="radio" name="q26" value="E"> E. $6$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p26', this)">Pembahasan</button>
+  <div class="pembahasan" id="p26">
+    <div class="step">$5x - 2 = 3x + 6 \Rightarrow 5x - 3x = 6 + 2 \Rightarrow 2x = 8 \Rightarrow x = 4$</div>
+    <span class="jawaban">Jawaban: D</span>
+  </div>
+</div>
+
+<!-- Soal 27 -->
+<div class="card" id="card27">
+  <div class="q-number">Soal 27</div>
+  <div class="q-text">Nilai $x$ yang memenuhi $2(x - 1) = 3x + 5$ adalah …</div>
+  <div class="options">
+    <label><input type="radio" name="q27" value="A"> A. $7$</label>
+    <label><input type="radio" name="q27" value="B"> B. $-3$</label>
+    <label><input type="radio" name="q27" value="C"> C. $3$</label>
+    <label><input type="radio" name="q27" value="D"> D. $-5$</label>
+    <label><input type="radio" name="q27" value="E"> E. $-7$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p27', this)">Pembahasan</button>
+  <div class="pembahasan" id="p27">
+    <div class="step">$2x - 2 = 3x + 5 \Rightarrow -2 - 5 = 3x - 2x \Rightarrow -7 = x$</div>
+    <div class="step">Jadi $x = -7$</div>
+    <span class="jawaban">Jawaban: E</span>
+  </div>
+</div>
+
+<!-- Soal 28 -->
+<div class="card" id="card28">
+  <div class="q-number">Soal 28</div>
+  <div class="q-text">Himpunan penyelesaian dari $4x - 3 \ge 2x + 7$ adalah …</div>
+  <div class="options">
+    <label><input type="radio" name="q28" value="A"> A. $x \le 5$</label>
+    <label><input type="radio" name="q28" value="B"> B. $x \ge 2$</label>
+    <label><input type="radio" name="q28" value="C"> C. $x \le 2$</label>
+    <label><input type="radio" name="q28" value="D"> D. $x \ge 10$</label>
+    <label><input type="radio" name="q28" value="E"> E. $x \ge 5$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p28', this)">Pembahasan</button>
+  <div class="pembahasan" id="p28">
+    <div class="step">$4x - 3 \ge 2x + 7 \Rightarrow 4x - 2x \ge 7 + 3 \Rightarrow 2x \ge 10 \Rightarrow x \ge 5$</div>
+    <span class="jawaban">Jawaban: E</span>
+  </div>
+</div>
+
+<!-- Soal 29 -->
+<div class="card" id="card29">
+  <div class="q-number">Soal 29</div>
+  <div class="q-text">Nilai $x$ yang memenuhi $7x - 4 = 3x + 8$ adalah …</div>
+  <div class="options">
+    <label><input type="radio" name="q29" value="A"> A. $2$</label>
+    <label><input type="radio" name="q29" value="B"> B. $4$</label>
+    <label><input type="radio" name="q29" value="C"> C. $3$</label>
+    <label><input type="radio" name="q29" value="D"> D. $5$</label>
+    <label><input type="radio" name="q29" value="E"> E. $1$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p29', this)">Pembahasan</button>
+  <div class="pembahasan" id="p29">
+    <div class="step">$7x - 4 = 3x + 8 \Rightarrow 7x - 3x = 8 + 4 \Rightarrow 4x = 12 \Rightarrow x = 3$</div>
+    <span class="jawaban">Jawaban: C</span>
+  </div>
+</div>
+
+<!-- Soal 30 -->
+<div class="card" id="card30">
+  <div class="q-number">Soal 30</div>
+  <div class="q-text">Himpunan penyelesaian dari $5x + 2 \le 3x + 8$ adalah …</div>
+  <div class="options">
+    <label><input type="radio" name="q30" value="A"> A. $x \ge 3$</label>
+    <label><input type="radio" name="q30" value="B"> B. $x \le 5$</label>
+    <label><input type="radio" name="q30" value="C"> C. $x \ge 5$</label>
+    <label><input type="radio" name="q30" value="D"> D. $x \le 3$</label>
+    <label><input type="radio" name="q30" value="E"> E. $x \le 6$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p30', this)">Pembahasan</button>
+  <div class="pembahasan" id="p30">
+    <div class="step">$5x + 2 \le 3x + 8 \Rightarrow 5x - 3x \le 8 - 2 \Rightarrow 2x \le 6 \Rightarrow x \le 3$</div>
+    <span class="jawaban">Jawaban: D</span>
+  </div>
+</div>
+
+<!-- ==================== BAGIAN 2 : PILIHAN GANDA KOMPLEKS ==================== -->
+<div class="section-title pgk">🧩 Bagian 2 — Pilihan Ganda Kompleks (Soal 31–35)</div>
+
+<!-- Soal 31 -->
+<div class="card" id="card31">
+  <div class="q-number">Soal 31 <span class="badge-multi">Pilih semua jawaban benar</span></div>
+  <div class="q-text">Diketahui $f(x) = 2x + 1$ dan $g(x) = x - 3$. Manakah pernyataan berikut yang benar?</div>
+  <div class="options">
+    <label><input type="checkbox" name="q31" value="A"> A. $(f \circ g)(x) = 2x - 5$</label>
+    <label><input type="checkbox" name="q31" value="B"> B. $(g \circ f)(x) = 2x + 2$</label>
+    <label><input type="checkbox" name="q31" value="C"> C. $f^{-1}(x) = \dfrac{x-1}{2}$</label>
+    <label><input type="checkbox" name="q31" value="D"> D. $g^{-1}(x) = x - 3$</label>
+    <label><input type="checkbox" name="q31" value="E"> E. $(f \circ g)(2) = -1$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p31', this)">Pembahasan</button>
+  <div class="pembahasan" id="p31">
+    <div class="step">A. $(f \circ g)(x) = f(x-3) = 2(x-3) + 1 = 2x - 6 + 1 = 2x - 5$ → <strong>BENAR</strong></div>
+    <div class="step">B. $(g \circ f)(x) = g(2x+1) = (2x+1) - 3 = 2x - 2$ → <strong>SALAH</strong></div>
+    <div class="step">C. $f^{-1}(x) = \dfrac{x-1}{2}$ → <strong>BENAR</strong></div>
+    <div class="step">D. $g^{-1}(x) = x + 3$, bukan $x - 3$ → <strong>SALAH</strong></div>
+    <div class="step">E. $(f \circ g)(2) = 2(2) - 5 = -1$ → <strong>BENAR</strong></div>
+    <span class="jawaban">Jawaban: A, C, E</span>
+  </div>
+</div>
+
+<!-- Soal 32 -->
+<div class="card" id="card32">
+  <div class="q-number">Soal 32 <span class="badge-multi">Pilih semua jawaban benar</span></div>
+  <div class="q-text">Lingkaran berjari-jari $14$ cm. Manakah pernyataan berikut yang benar? ($\pi = \frac{22}{7}$)</div>
+  <div class="options">
+    <label><input type="checkbox" name="q32" value="A"> A. Keliling lingkaran $= 88$ cm</label>
+    <label><input type="checkbox" name="q32" value="B"> B. Panjang busur sudut pusat $90^\circ = 22$ cm</label>
+    <label><input type="checkbox" name="q32" value="C"> C. Panjang busur sudut pusat $45^\circ = 11$ cm</label>
+    <label><input type="checkbox" name="q32" value="D"> D. Luas lingkaran $= 154$ cm²</label>
+    <label><input type="checkbox" name="q32" value="E"> E. Panjang busur sudut pusat $180^\circ = 22$ cm</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p32', this)">Pembahasan</button>
+  <div class="pembahasan" id="p32">
+    <div class="step">A. Keliling $= 2\pi r = 2 \cdot \frac{22}{7} \cdot 14 = 88$ cm → <strong>BENAR</strong></div>
+    <div class="step">B. Busur $90^\circ = \frac{1}{4} \cdot 88 = 22$ cm → <strong>BENAR</strong></div>
+    <div class="step">C. Busur $45^\circ = \frac{1}{8} \cdot 88 = 11$ cm → <strong>BENAR</strong></div>
+    <div class="step">D. Luas $= \pi r^2 = \frac{22}{7} \cdot 196 = 616$ cm², bukan $154$ → <strong>SALAH</strong></div>
+    <div class="step">E. Busur $180^\circ = \frac{1}{2} \cdot 88 = 44$ cm, bukan $22$ → <strong>SALAH</strong></div>
+    <span class="jawaban">Jawaban: A, B, C</span>
+  </div>
+</div>
+
+<!-- Soal 33 -->
+<div class="card" id="card33">
+  <div class="q-number">Soal 33 <span class="badge-multi">Pilih semua jawaban benar</span></div>
+  <div class="q-text">Dua lingkaran berjari-jari $10$ cm dan $6$ cm dengan jarak pusat $20$ cm. Manakah pernyataan berikut yang benar?</div>
+  <div class="options">
+    <label><input type="checkbox" name="q33" value="A"> A. Garis singgung persekutuan luar $= 8\sqrt{6}$ cm</label>
+    <label><input type="checkbox" name="q33" value="B"> B. Garis singgung persekutuan dalam $= 12$ cm</label>
+    <label><input type="checkbox" name="q33" value="C"> C. Kedua lingkaran berpotongan</label>
+    <label><input type="checkbox" name="q33" value="D"> D. Kedua lingkaran saling lepas</label>
+    <label><input type="checkbox" name="q33" value="E"> E. Jumlah jari-jari $= 20$ cm</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p33', this)">Pembahasan</button>
+  <div class="pembahasan" id="p33">
+    <div class="step">A. Garis singgung luar $= \sqrt{20^2 - (10-6)^2} = \sqrt{400 - 16} = \sqrt{384} = 8\sqrt{6}$ cm → <strong>BENAR</strong></div>
+    <div class="step">B. Garis singgung dalam $= \sqrt{20^2 - (10+6)^2} = \sqrt{400 - 256} = \sqrt{144} = 12$ cm → <strong>BENAR</strong></div>
+    <div class="step">C. Syarat berpotongan: $|R-r| < d < R+r$. Di sini $d = 20 > 16$, jadi tidak berpotongan → <strong>SALAH</strong></div>
+    <div class="step">D. Karena $d > R + r$, kedua lingkaran saling lepas → <strong>BENAR</strong></div>
+    <div class="step">E. Jumlah jari-jari $= 10 + 6 = 16$ cm, bukan $20$ → <strong>SALAH</strong></div>
+    <span class="jawaban">Jawaban: A, B, D</span>
+  </div>
+</div>
+
+<!-- Soal 34 -->
+<div class="card" id="card34">
+  <div class="q-number">Soal 34 <span class="badge-multi">Pilih semua jawaban benar</span></div>
+  <div class="q-text">Manakah pernyataan berikut yang benar tentang diagram pencar?</div>
+  <div class="options">
+    <label><input type="checkbox" name="q34" value="A"> A. Diagram pencar menunjukkan hubungan antara dua variabel</label>
+    <label><input type="checkbox" name="q34" value="B"> B. Korelasi positif ditunjukkan oleh pola titik yang naik dari kiri ke kanan</label>
+    <label><input type="checkbox" name="q34" value="C"> C. Korelasi negatif ditunjukkan oleh pola titik yang turun dari kiri ke kanan</label>
+    <label><input type="checkbox" name="q34" value="D"> D. Jika titik-titik tersebar acak, maka terdapat korelasi kuat</label>
+    <label><input type="checkbox" name="q34" value="E"> E. Koefisien korelasi berkisar antara $0$ sampai $1$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p34', this)">Pembahasan</button>
+  <div class="pembahasan" id="p34">
+    <div class="step">A. Benar, diagram pencar menunjukkan hubungan dua variabel.</div>
+    <div class="step">B. Benar, pola naik dari kiri ke kanan = korelasi positif.</div>
+    <div class="step">C. Benar, pola turun dari kiri ke kanan = korelasi negatif.</div>
+    <div class="step">D. Salah, tersebar acak berarti tidak ada korelasi.</div>
+    <div class="step">E. Salah, koefisien korelasi berkisar antara $-1$ sampai $1$.</div>
+    <span class="jawaban">Jawaban: A, B, C</span>
+  </div>
+</div>
+
+<!-- Soal 35 -->
+<div class="card" id="card35">
+  <div class="q-number">Soal 35 <span class="badge-multi">Pilih semua jawaban benar</span></div>
+  <div class="q-text">Manakah pernyataan berikut yang benar?</div>
+  <div class="options">
+    <label><input type="checkbox" name="q35" value="A"> A. Penyelesaian $2x + 5 = 13$ adalah $x = 4$</label>
+    <label><input type="checkbox" name="q35" value="B"> B. Penyelesaian $3x - 7 = 2x + 1$ adalah $x = 8$</label>
+    <label><input type="checkbox" name="q35" value="C"> C. Penyelesaian $4x - 3 > 9$ adalah $x > 3$</label>
+    <label><input type="checkbox" name="q35" value="D"> D. Penyelesaian $2(x + 1) = 3x - 4$ adalah $x = 2$</label>
+    <label><input type="checkbox" name="q35" value="E"> E. Penyelesaian $5x + 2 \le 3x + 8$ adalah $x \ge 3$</label>
+  </div>
+  <button class="btn-pembahasan" onclick="toggle('p35', this)">Pembahasan</button>
+  <div class="pembahasan" id="p35">
+    <div class="step">A. $2x + 5 = 13 \Rightarrow 2x = 8 \Rightarrow x = 4$ → <strong>BENAR</strong></div>
+    <div class="step">B. $3x - 7 = 2x + 1 \Rightarrow 3x - 2x = 1 + 7 \Rightarrow x = 8$ → <strong>BENAR</strong></div>
+    <div class="step">C. $4x - 3 > 9 \Rightarrow 4x > 12 \Rightarrow x > 3$ → <strong>BENAR</strong></div>
+    <div class="step">D. $2(x + 1) = 3x - 4 \Rightarrow 2x + 2 = 3x - 4 \Rightarrow 2 + 4 = 3x - 2x \Rightarrow x = 6$ (bukan $2$) → <strong>SALAH</strong></div>
+    <div class="step">E. $5x + 2 \le 3x + 8 \Rightarrow 2x \le 6 \Rightarrow x \le 3$ (bukan $x \ge 3$) → <strong>SALAH</strong></div>
+    <span class="jawaban">Jawaban: A, B, C</span>
+  </div>
+</div>
+
+<!-- ============================ COPYRIGHT ============================ -->
+<div class="copyright">
+  Copyright © : <span class="copy-year"></span> | Rahadi S.
+</div>
+
+<script>
+/* =========================================================
+   KUNCI JAWABAN
+   - String  : soal pilihan ganda biasa (satu jawaban)
+   - Array   : soal pilihan ganda kompleks (beberapa jawaban)
+   ========================================================= */
+const answers = {
+  q1:'B',  q2:'C',  q3:'D',  q4:'D',  q5:'E',
+  q6:'B',  q7:'E',  q8:'C',  q9:'B',  q10:'D',
+  q11:'E', q12:'C', q13:'C', q14:'C', q15:'D',
+  q16:'B', q17:'B', q18:'C', q19:'C', q20:'D',
+  q21:'B', q22:'C', q23:'E', q24:'C', q25:'C',
+  q26:'D', q27:'E', q28:'E', q29:'C', q30:'D',
+  q31:['A','C','E'],
+  q32:['A','B','C'],
+  q33:['A','B','D'],
+  q34:['A','B','C'],
+  q35:['A','B','C']
+};
+
+const TOTAL = 35;
+
+function toggle(id, btn) {
+  const el = document.getElementById(id);
+  el.classList.toggle('show');
+  if (el.classList.contains('show')) {
+    btn.textContent = 'Tutup Pembahasan';
+    btn.classList.add('active');
+  } else {
+    btn.textContent = 'Pembahasan';
+    btn.classList.remove('active');
+  }
+}
+
+function checkAll() {
+  let score = 0;
+
+  for (let i = 1; i <= TOTAL; i++) {
+    const name = 'q' + i;
+    const card = document.getElementById('card' + i);
+    const labels = card.querySelectorAll('.options label');
+    labels.forEach(l => l.classList.remove('correct', 'incorrect'));
+
+    const ans = answers[name];
+
+    /* ---------- PILIHAN GANDA KOMPLEKS ---------- */
+    if (Array.isArray(ans)) {
+      const checked = Array.from(
+        card.querySelectorAll('input[name="' + name + '"]:checked')
+      ).map(x => x.value);
+
+      const allCorrect =
+        checked.length === ans.length && ans.every(a => checked.includes(a));
+
+      if (allCorrect) score++;
+
+      labels.forEach(l => {
+        const inp = l.querySelector('input');
+        if (inp.checked) {
+          l.classList.add(ans.includes(inp.value) ? 'correct' : 'incorrect');
+        } else if (ans.includes(inp.value)) {
+          l.classList.add('correct');
+        }
+      });
+    }
+
+    /* ---------- PILIHAN GANDA BIASA ---------- */
+    else {
+      const selected = card.querySelector('input[name="' + name + '"]:checked');
+      if (selected) {
+        if (selected.value === ans) {
+          score++;
+          selected.parentElement.classList.add('correct');
+        } else {
+          selected.parentElement.classList.add('incorrect');
+          const correctInput = card.querySelector(
+            'input[name="' + name + '"][value="' + ans + '"]'
+          );
+          if (correctInput) correctInput.parentElement.classList.add('correct');
+        }
+      }
+    }
+  }
+
+  document.getElementById('score-display').textContent = `Skor: ${score} / ${TOTAL}`;
+}
+
+function resetAll() {
+  document.querySelectorAll('input[type="radio"], input[type="checkbox"]')
+    .forEach(r => r.checked = false);
+  document.querySelectorAll('.options label')
+    .forEach(l => l.classList.remove('correct', 'incorrect'));
+  document.querySelectorAll('.pembahasan')
+    .forEach(p => p.classList.remove('show'));
+  document.querySelectorAll('.btn-pembahasan')
+    .forEach(b => { b.textContent = 'Pembahasan'; b.classList.remove('active'); });
+  document.getElementById('score-display').textContent = `Skor: 0 / ${TOTAL}`;
+}
+
+/* ================================================================
+   ISI TAHUN COPYRIGHT OTOMATIS
+   ================================================================ */
+document.querySelectorAll('.copy-year').forEach(function (el) {
+  el.textContent = new Date().getFullYear();
+});
+</script>
+
+<!-- ==================== FORCE FULLSCREEN ==================== -->
+<div id="fs-banner" style="display:none; position:fixed; left:50%; bottom:20px; transform:translateX(-50%); background:#2c3e50; color:#fff; padding:10px 18px; border-radius:8px; font-size:14px; z-index:9999; box-shadow:0 4px 12px rgba(0,0,0,.25); cursor:pointer;">
+  Klick to FULLSCREEN
+</div>
+
+<script>
+(function () {
+  function requestFS() {
+    var el = document.documentElement;
+    var fn = el.requestFullscreen || el.webkitRequestFullscreen || el.mozRequestFullScreen || el.msRequestFullscreen;
+    if (fn) {
+      try {
+        var p = fn.call(el);
+        if (p && p.catch) p.catch(function(){ showBanner(); });
+        return true;
+      } catch (e) { showBanner(); return false; }
+    } else {
+      showBanner();
+      return false;
+    }
+  }
+
+  function isFS() {
+    return document.fullscreenElement || document.webkitFullscreenElement ||
+           document.mozFullScreenElement || document.msFullscreenElement;
+  }
+
+  function showBanner() {
+    var b = document.getElementById('fs-banner');
+    if (b) b.style.display = 'block';
+  }
+
+  function hideBanner() {
+    var b = document.getElementById('fs-banner');
+    if (b) b.style.display = 'none';
+  }
+
+  window.addEventListener('load', function () {
+    if (!isFS()) {
+      requestFS();
+      setTimeout(function () {
+        if (!isFS()) showBanner();
+      }, 500);
+    }
+  });
+
+  function firstInteraction() {
+    if (!isFS()) requestFS();
+    document.removeEventListener('click', firstInteraction);
+    document.removeEventListener('touchstart', firstInteraction);
+    document.removeEventListener('keydown', firstInteraction);
+  }
+  document.addEventListener('click', firstInteraction);
+  document.addEventListener('touchstart', firstInteraction, {passive:true});
+  document.addEventListener('keydown', firstInteraction);
+
+  document.addEventListener('click', function (e) {
+    if (e.target && e.target.id === 'fs-banner') {
+      requestFS();
+    }
+  });
+
+  document.addEventListener('fullscreenchange', function () {
+    if (isFS()) hideBanner();
+  });
+  document.addEventListener('webkitfullscreenchange', function () {
+    if (isFS()) hideBanner();
+  });
+
+  window.toggleFullscreen = function () {
+    if (isFS()) {
+      var exit = document.exitFullscreen || document.webkitExitFullscreen || document.mozCancelFullScreen || document.msExitFullscreen;
+      if (exit) exit.call(document);
+    } else {
+      requestFS();
+    }
+  };
+})();
+</script>
+</body>
+</html>
